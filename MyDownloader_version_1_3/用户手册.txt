@@ -1,0 +1,103 @@
+MyDownloader 用户手册
+作者：重庆大学大数据与软件学院软件工程一班姚沛帆
+
+== 中文版本 ==
+
+=== 软件介绍 ===
+MyDownloader是一款简洁高效的文件下载工具，支持HTTP/HTTPS文件下载，并提供用户登录系统、断点续传、下载速度显示等功能。
+
+=== 系统要求 ===
+- 操作系统：Windows 7/8/10/11
+- Qt框架：需要安装Qt运行库
+- 网络连接：支持HTTP/HTTPS协议
+
+=== 安装说明 ===
+1. 下载MyDownloader安装包
+2. 解压到任意文件夹
+3. 运行MyDownloader.exe启动程序
+
+=== 使用说明 ===
+
+==== 登录系统 ====
+1. 启动程序后，会显示登录界面
+2. 输入用户名和密码登录（如果没有账号，可以点击注册按钮）
+3. 注册新账号时，需要输入用户名和密码，并确认密码
+
+==== 下载文件 ====
+1. 在主界面的URL输入框中输入要下载的文件链接
+2. 点击浏览按钮选择下载保存路径（可选，默认为系统下载文件夹）
+3. 点击下载按钮开始下载
+
+==== 下载控制 ====
+- 暂停下载：点击停止按钮
+- 继续下载：点击继续按钮
+- 取消下载：点击取消按钮（将删除临时下载文件）
+
+==== 其他功能 ====
+- 系统托盘：程序可以最小化到系统托盘，双击托盘图标可以显示/隐藏主窗口
+- 下载速度显示：实时显示当前下载速度和预计剩余时间
+- 历史记录：点击历史按钮查看之前输入的URL
+- 帮助文档：点击帮助按钮查看详细使用说明
+（AI助手默认API KEY：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）
+
+=== 常见问题 ===
+Q: 下载文件失败怎么办？
+A: 请检查网络连接和URL是否正确，确保目标服务器可访问。
+
+Q: 如何查看下载进度？
+A: 下载开始后，界面会显示进度条和下载速度信息。
+
+Q: 程序可以同时下载多个文件吗？
+A: 当前版本暂不支持多任务同时下载。
+
+
+== English Version ==
+
+=== Software Introduction ===
+MyDownloader is a simple and efficient file download tool that supports HTTP/HTTPS file downloads, with features such as user login system, breakpoint resume, download speed display, and more.
+
+=== System Requirements ===
+- Operating System: Windows 7/8/10/11
+- Qt Framework: Qt runtime libraries required
+- Network Connection: Support for HTTP/HTTPS protocols
+
+=== Installation Instructions ===
+1. Download the MyDownloader installation package
+2. Extract it to any folder
+3. Run MyDownloader.exe to start the program
+
+=== Usage Instructions ===
+
+==== Login System ====
+1. After starting the program, the login interface will be displayed
+2. Enter your username and password to login (if you don't have an account, click the register button)
+3. When registering a new account, you need to enter a username and password, and confirm the password
+
+==== Downloading Files ====
+1. Enter the file link to download in the URL input box on the main interface
+2. Click the browse button to select the download save path (optional, default is system download folder)
+3. Click the download button to start downloading
+
+==== Download Control ====
+- Pause download: Click the stop button
+- Resume download: Click the continue button
+- Cancel download: Click the cancel button (temporary download files will be deleted)
+
+==== Other Features ====
+- System Tray: The program can be minimized to the system tray, double-click the tray icon to show/hide the main window
+- Download Speed Display: Real-time display of current download speed and estimated remaining time
+- History: Click the history button to view previously entered URLs
+- Help Documentation: Click the help button to view detailed usage instructions
+（AI Assistant Default API KEY：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）
+
+
+=== Frequently Asked Questions ===
+Q: What should I do if the file download fails?
+A: Please check your network connection and whether the URL is correct, ensuring that the target server is accessible.
+
+Q: How to view download progress?
+A: After downloading starts, the interface will display a progress bar and download speed information.
+
+Q: Can the program download multiple files simultaneously?
+A: The current version does not support multiple simultaneous downloads.
+

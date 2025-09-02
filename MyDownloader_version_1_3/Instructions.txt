@@ -1,0 +1,119 @@
+## MyDownloader v1.1 — Instructions
+
+### Author
+Chongqing University, School of Big Data & Software, Software Engineering Class 1 — Yao Peifan
+
+### 1. Overview
+MyDownloader is a lightweight GUI downloader built with Qt. It supports HTTP/HTTPS downloads with pause, resume (HTTP Range), and cancel. The app shows a real‑time progress bar, download speed, and estimated remaining time, and displays a completion notification in the system tray.
+
+### 2. System Requirements
+- Windows 10 or later (x64)
+- Qt 6.9.x with MinGW 64‑bit toolchain (for building from source)
+- Network access to the target URLs (HTTP/HTTPS)
+
+### 3. Building from Source
+1. Open the project file `MyDownloader_version_1_1.pro` in Qt Creator.
+2. Select the kit: “Desktop Qt 6.9.1 MinGW 64‑bit” (or any compatible Qt 6.9.x kit).
+3. Configure and build (Debug or Release).
+4. The executable will be generated under `build/…/debug/` or `build/…/release/` accordingly.
+
+Alternatively (command line):
+- Run `qmake`/`cmake` via your chosen Qt kit; then `mingw32-make` to build.
+
+### 4. Running the App
+1. Launch `MyDownloader_version_1_1.exe` (from your build output directory).
+2. The window is frameless and draggable from the top area.
+
+### 5. UI Overview
+- URL Input (`lineEdit`): Enter the direct download URL.
+- Download Path (`downloadPathEdit`): Optional. Choose a destination directory.
+  - Browse: Pick a folder.
+  - Reset: Clear to use the default.
+- Start: Begin downloading the entered URL.
+- Stop: Pause the current download.
+- Continue: Resume a paused download.
+- Cancel: Abort the current download and remove temporary files.
+- Progress Bar: Shows downloaded bytes and total size.
+- Rate Label (`ratelb`): Real‑time download speed (e.g., MB/s), updated every second.
+- Time Label (`timelb`): Estimated remaining time (ETA), updated every second.
+- Q&A(`Any Question?`): Press to show this user manual.
+- History(`History`): Press to show all the URLs of the files you've downloaded  during this usage.
+
+### 6. Download Location
+- If a path is provided in `downloadPathEdit`, it is used as the base folder.
+- If empty, the app uses the system Downloads folder; if unavailable, it falls back to your home directory.
+
+### 7. File Naming and Temporary Files
+- The output file name is derived from the URL path (e.g., `/path/file.zip` → `file.zip`).
+- During download, data is written into a per‑download working directory: `<base>/<filename>.download/`.
+- The temporary file inside is `<base>/<filename>.download/<filename>`.
+- On successful completion, the file is moved to `<base>/<filename>`, and the `.download` directory is removed.
+- On cancel, the entire `.download` directory is removed to keep your disk clean.
+
+### 8. Start a Download
+1. Paste a valid HTTP/HTTPS URL into the URL input box.
+2. (Optional) Set a download path; otherwise, leave empty for default.
+3. Click Start.
+4. The progress bar appears; speed and ETA update every second.
+
+### 9. Pause (Stop), Resume (Continue), Cancel
+- Stop (Pause):
+  - Immediately pauses the current download and keeps the partially downloaded data on disk.
+  - The app records the bytes already written to support resuming.
+- Continue (Resume):
+  - Continues the paused download using HTTP Range from the last saved byte.
+  - The file is appended without data loss.
+- Cancel:
+  - Aborts the active download (if any) and deletes the entire working folder `<filename>.download/`.
+  - The progress bar hides and the app resets to idle state.
+
+Notes:
+- Resume relies on the server supporting HTTP Range requests (most servers do). If not supported, resuming may restart from the beginning.
+
+### 10. Progress, Speed, and ETA
+- Progress Bar: Shows total bytes if known; otherwise it grows as information becomes available.
+- Speed (`ratelb`): Calculated via a one‑second interval using bytes written to disk; shown as KB/s, MB/s, etc.
+- ETA (`timelb`): Estimated using remaining bytes divided by current speed.
+  - If speed is too low or total size is unknown, ETA shows `--:--`.
+
+### 11. Completion Notification
+- On successful completion, a system tray balloon appears (bottom‑right) with the message: “Download  Mission Completed!” for 3 seconds.
+- Ensure Windows allows notifications for the application; otherwise, the balloon may not appear.
+
+### 12. Error Handling
+- If a network error occurs during download, the app stops the timer and retains the partial data in the `.download` folder so you can try Continue later.
+- If the target file already exists at the final location, it is replaced on successful completion.
+
+### 13. Best Practices & Tips
+- Verify your URL is a direct link to a file (not an HTML page requiring authentication).
+- For large files, ensure there is enough free disk space in the chosen base directory.
+- Keep the app running to allow the download to complete.
+- If a resume fails repeatedly, try Cancel to remove partial data and Start fresh.
+
+### 14. Privacy
+- The application does not collect or transmit personal data. Only the file specified by your URL is requested.
+
+### 15. Troubleshooting
+- No progress / very slow:
+  - Check your network connection; try a different URL.
+  - Some servers throttle or disallow Range; resuming may restart.
+- No tray notification:
+  - Confirm that system tray is available and notifications are enabled for the app.
+- Permission errors when writing files:
+  - Choose a writable directory (e.g., your Downloads folder).
+- URL rejected or wrong file name:
+  - Ensure the URL ends with a file path; if missing, the app will default to `index.html`.
+
+### 16. Keyboard & Window Controls
+- Top bar: drag to move the window.
+- Minimize and close buttons are available on the top‑right.
+
+### 17. Uninstall / Clean Up
+- Delete the application executable and build folders.
+- Temporary download folders (`<filename>.download/`) are removed automatically on success or cancel.
+
+### 18. License & Credits
+- This project uses Qt 6.9.x (see Qt licensing for details).
+- Thanks for using!
+
+— End —

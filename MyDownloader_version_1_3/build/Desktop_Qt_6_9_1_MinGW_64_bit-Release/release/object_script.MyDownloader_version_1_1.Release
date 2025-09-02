@@ -1,0 +1,11 @@
+release/dialog.o
+release/login.o
+release/main.o
+release/mainwindow.o
+release/signup.o
+release/qrc_help.o
+release/qrc_pics.o
+release/moc_dialog.o
+release/moc_login.o
+release/moc_mainwindow.o
+release/moc_signup.o

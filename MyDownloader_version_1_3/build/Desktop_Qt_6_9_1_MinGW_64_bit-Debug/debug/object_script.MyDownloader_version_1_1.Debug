@@ -1,0 +1,15 @@
+debug/deepseek_client.o
+debug/dialog.o
+debug/login.o
+debug/main.o
+debug/mainwindow.o
+debug/mainwindowai.o
+debug/signup.o
+debug/qrc_help.o
+debug/qrc_pics.o
+debug/moc_deepseek_client.o
+debug/moc_dialog.o
+debug/moc_login.o
+debug/moc_mainwindow.o
+debug/moc_mainwindowai.o
+debug/moc_signup.o

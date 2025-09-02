@@ -1,0 +1,15 @@
+release/deepseek_client.o
+release/dialog.o
+release/login.o
+release/main.o
+release/mainwindow.o
+release/mainwindowai.o
+release/signup.o
+release/qrc_help.o
+release/qrc_pics.o
+release/moc_deepseek_client.o
+release/moc_dialog.o
+release/moc_login.o
+release/moc_mainwindow.o
+release/moc_mainwindowai.o
+release/moc_signup.o

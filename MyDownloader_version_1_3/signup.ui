@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Signup</class>
+ <widget class="QWidget" name="Signup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>763</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">*{
+	background-color: rgb(255, 255, 255);
+}
+QFrame#frame{
+border-image: url(:/signuppic.jpg);
+border-radius:20px;
+}
+#frame_2{
+background-color: rgba(152, 152, 152, 230);
+border-radius:20px;
+}
+QLabel#infolabel{
+background:transparent;
+}
+#tiplabel{
+background:transparent;
+}
+QLineEdit#acle{
+background:transparent;
+	border:none;
+	border-bottom:1px solid  rgb(13, 13, 13)
+}
+#pswle{
+background:transparent;
+	border:none;
+	border-bottom:1px solid rgbrgb(13, 13, 13)
+}
+#esle{
+background:transparent;
+	border:none;
+	border-bottom:1px solid rgbrgb(13, 13, 13)
+}
+QPushButton#esbtn{
+border-radius:10px;
+	background-color: qlineargradient(spread:pad, x1:0.89, y1:0.062, x2:0.095, y2:0.943005, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(81, 124, 159, 255));
+}
+#rtbtn{
+border-radius:10px;
+	background-color: qlineargradient(spread:pad, x1:0.89, y1:0.062, x2:0.095, y2:0.943005, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(81, 124, 159, 255));
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>82</y>
+        <width>731</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="tiplabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;Let's get a new account!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="acle">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Please create your account(characters and numbers only)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pswle">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Please create your password(characters and numbers only)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="esle">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>180</y>
+         <width>651</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Please confirm your password</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="esbtn">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>250</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sign Up</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="rtbtn">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>250</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Return to Log In</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="infolabel">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Sign Up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
